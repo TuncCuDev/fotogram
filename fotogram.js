@@ -8,7 +8,6 @@ let myImgs = [
     "./img/Mountain7.jpg",
     "./img/Mountain8.jpg",
     "./img/Mountain9.jpg",
-    "./img/Mountain10.jpg",
     "./img/Mountain11.jpg",
     "./img/Mountain12.jpg",
     "./img/Mountain13.jpg",
