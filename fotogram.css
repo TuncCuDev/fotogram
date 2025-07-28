@@ -1,7 +1,51 @@
 body{
-    background-color: rgb(18, 17, 17);
+    margin: 0px;    
+}
+
+header{
+    background-color: rgb(27 32 52);
+}
+
+footer{
+    background-color: rgb(27 32 52);
 }
 
 .fotogram_logo{
-    height: 24px
+    height: 24px;
+    padding-left: 15px;
+}
+
+#mountain_imgs img{
+    height: 50px;
+    width: 50px;
+    border: 2px;
+}
+
+section{
+    background-color: rgb(29 20 20);
+    height: calc(100vh - 96px);
+}
+
+.main{
+    height: calc(100vh - 96px);
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+footer{
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer-icon{
+    height: 16px;
+    width: auto;
+    margin-left: 5px;
+    padding-top: 12px;
+}
+
+.footer-left{
+    color: white;
 }
