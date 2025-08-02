@@ -43,13 +43,16 @@ function getImages(i){
  }
 
  function openNextImage(){
-    currentIndex = (currentIndex + 1) % myImgs.length;
-    let overlayimg = document.getElementById('overlay-img');
-    overlayimg.src = myImgs[currentIndex];
- }
+   currentIndex = [currentIndex + 1] % myImgs.length;
+    const overlayImg = document.getElementById('overlay-img');
+    overlayImg.src = myImgs[currentIndex];
+   }
+
+ 
 
  function openPreviousImage(){
-    currentIndex = (currentIndex -1) % myImgs.length;
-    let overlayimg = document.getElementById('overlay-img');
-    overlayimg.src = myImgs[currentIndex];
- }
+    currentIndex = [currentIndex -1 + myImgs.length] % myImgs.length;
+        const overlayImg = document.getElementById('overlay-img');
+        overlayImg.src = myImgs[currentIndex]
+    }
+ 
