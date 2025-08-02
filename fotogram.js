@@ -13,6 +13,7 @@ let myImgs = [
     "./img/Mountain13.jpg",
 ];
 
+let currentIndex= 0;
 
 function render(){
     let ImgsRef = document.getElementById('mountain_imgs');
@@ -23,9 +24,32 @@ function render(){
 }
 
 function getImages(i){
-    return `<div> 
-               <img src="${myImgs[i]}" alt="Berbild">
+    return `<div onclick="openOverlay(${i})" class="single_img"> 
+               <img src="${myImgs[i]}" alt="Bild ${i + 1}"/>
             </div>`
 }
 
- window.onload = render;
+ function openOverlay(index){
+    currentIndex = index;
+    let Refoverlay = document.getElementById('overlay');
+    let overlayImg = document.getElementById('overlay-img');
+    overlayImg.src = myImgs[currentIndex];
+    Refoverlay.classList.remove('d_none');
+ }
+
+ function closeOverlay(){
+    let overlayRef = document.getElementById('overlay');
+    overlayRef.classList.add('d_none');
+ }
+
+ function openNextImage(){
+    currentIndex = (currentIndex + 1) % myImgs.length;
+    let overlayimg = document.getElementById('overlay-img');
+    overlayimg.src = myImgs[currentIndex];
+ }
+
+ function openPreviousImage(){
+    currentIndex = (currentIndex -1) % myImgs.length;
+    let overlayimg = document.getElementById('overlay-img');
+    overlayimg.src = myImgs[currentIndex];
+ }
