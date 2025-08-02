@@ -5,11 +5,20 @@ body{
 
 header{
     background-color: rgb(27 32 52);
+    padding-left: 160px;
+}
+
+.fotogram_logo{
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 h1{
     margin-block-start: 0;
     color: white;
+    padding-left: 200px;
+    padding-top: 25px;
+    padding-bottom: 25px;
 }
 
 footer{
@@ -17,32 +26,53 @@ footer{
     text-align: center;
 }
 
+.footer-left{
+    display: flex;
+    gap: 10px;
+}
+
+
 .single_img:hover{
     background-color: rgba(12, 12, 12, 0.152);
 }
+
 .fotogram_logo{
     height: 24px;
     padding-left: 15px;
 }
 
-#mountain_imgs img{
-    height: 60px;
+.single_img{
     width: 100px;
+    height: auto;
+    width: 100px;
+}
+
+.single_img img{
+    width: 100px;
+    height: 60px;
+    display: block;
     border: 2px solid white;
     cursor: pointer;
-    align-items: center;
+    object-fit: cover;
 }
+
 
 section{
     background-color: rgb(29 20 20);
-    height: calc(100vh - 96px);
-      height: calc(100vh - 96px);
+    min-height: calc(100vh - 96px);
+    overflow: auto;
 }
 
+
 .main{
-    flex-wrap: wrap;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
     background-color: rgba(255, 0, 0, 0.018);
+    gap: 10px;
+    padding-left: 160px;
+    padding-right: 160px;
+    padding-bottom: 25px;
 }
 
 footer{
@@ -60,6 +90,7 @@ footer{
 p{
     color: white;
     font-size: 16px;
+    text-decoration: none;
 }
 
 .overlay{
@@ -68,19 +99,20 @@ p{
     left: 0;
     height: 100vh;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.462);
+    background-color: rgba(6, 15, 11, 0.597);
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1;
+    z-index: 500;
 }
 
 #overlay-img{
+    max-width: 90vh;
+    max-height: 90vh;
+    width: auto;
+    height: auto;
+    object-fit: cover;
     display: block;
-    max-width: 67%;
-    max-height: 90%;
-    margin: 123px;
-
 }
 
 .d_none{
@@ -89,34 +121,32 @@ p{
 
 
 .close_btn {
-    top: 20px;
-    right: 250px;
+    top: 30px;
+    right: 165px;
     position: absolute;
     height: 30px;
-    width: auto;
     cursor: pointer;
+    border-radius: 15px;
+
 }
 
-.left_btn {
-    top: 50%;
-    left: 120px;
+
+.left_btn{
+    left: 150px;
+    height: 40px;
     position: absolute;
-    height: 30px;
-    width: auto;
     cursor: pointer;
+    top: 50%;
+    border-radius: 25px;
 }
 
 .right_btn {
-    top: 50%;
-    right: 255px;
+    right: 150px;
+    height: 40px;
     position: absolute;
-    height: 30px;
-    width: auto;
     cursor: pointer;
-}
-
-.single_img {
-    margin: 10px;
+    top: 50%;
+    border-radius: 25px;
 }
 
 .dialog{
