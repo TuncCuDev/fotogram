@@ -42,7 +42,8 @@ footer{
 }
 
 .single_img{
-    width: 100px;
+    width: calc(25% - 10px);
+    box-sizing: border-box;
     height: auto;
     width: 100px;
 }
@@ -65,9 +66,10 @@ section{
 
 
 .main{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
+    padding: 20px;
     background-color: rgba(255, 0, 0, 0.018);
     gap: 10px;
     padding-left: 160px;
@@ -111,7 +113,7 @@ p{
     max-height: 90vh;
     width: auto;
     height: auto;
-    object-fit: cover;
+    object-fit: contain;
     display: block;
 }
 
@@ -127,9 +129,7 @@ p{
     height: 30px;
     cursor: pointer;
     border-radius: 15px;
-
 }
-
 
 .left_btn{
     left: 150px;
