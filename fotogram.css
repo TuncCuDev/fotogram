@@ -26,9 +26,9 @@ footer{
     text-align: center;
 }
 
-.footer-left{
-    display: flex;
-    gap: 10px;
+.footer-logo{
+    height: 24px;
+    padding: 5px 0px;
 }
 
 
@@ -57,13 +57,11 @@ footer{
     object-fit: cover;
 }
 
-
 section{
     background-color: rgb(29 20 20);
     min-height: calc(100vh - 96px);
     overflow: auto;
 }
-
 
 .main{
     display: flex;
@@ -75,18 +73,6 @@ section{
     padding-left: 160px;
     padding-right: 160px;
     padding-bottom: 25px;
-}
-
-footer{
-    display: flex;
-    justify-content: space-around;
-}
-
-.footer-icon{
-    height: 16px;
-    width: auto;
-    margin-left: 5px;
-    padding-top: 12px;
 }
 
 p{
@@ -120,7 +106,6 @@ p{
 .d_none{
     display: none;
 }
-
 
 .close_btn {
     top: 30px;
