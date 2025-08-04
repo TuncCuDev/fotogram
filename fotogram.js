@@ -35,15 +35,15 @@ function render(){
     fotogram.innerHTML = "";
     for (let i = 0; i < myImgs.length; i++) {
         fotogram.innerHTML += getImages(i);
-    }   
-}
+    };
+};
 
 function getImages(i){
     return `<div onclick="openOverlay(${i})" class="single_img"> 
                <img src="${myImgs[i]}" alt="Bild ${i + 1}"/>
                <p>${TitlesImgs[i]}</p>
             </div>`;
-}
+};
 
  function openOverlay(index){
     currentIndex = index;
@@ -51,26 +51,26 @@ function getImages(i){
     let overlayImg = document.getElementById('overlay-img');
     overlayImg.src = myImgs[currentIndex];
     Refoverlay.classList.remove('d_none');
- }
+ };
 
  function closeOverlay(){
     let overlayRef = document.getElementById('overlay');
     overlayRef.classList.add('d_none');
- }
+ };
 
  function openNextImage(){
    currentIndex = currentIndex + 1;
     if (currentIndex === myImgs.length){
         currentIndex = 0;
-    }
-    return document.getElementById('overlay-img').src = myImgs[currentIndex]
-}
+    };
+    return document.getElementById('overlay-img').src = myImgs[currentIndex];
+};
 
  function openPreviousImage(){
     currentIndex = currentIndex - 1;
     if (currentIndex < 0){
         currentIndex = myImgs.length -1;
-    }
+    };
     return document.getElementById('overlay-img').src = myImgs[currentIndex];
-    }
+    };
  
