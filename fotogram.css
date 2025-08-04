@@ -79,6 +79,7 @@ p{
     color: white;
     font-size: 16px;
     text-decoration: none;
+    margin-top: 1px;
 }
 
 .overlay{
@@ -109,6 +110,10 @@ p{
     align-items: center;
     height: 85vh;
     width: 85vw;
+}
+
+.titles{
+    color: white;
 }
 
 .d_none{

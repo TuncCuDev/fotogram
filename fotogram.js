@@ -13,20 +13,36 @@ let myImgs = [
     "./img/Mountain13.jpg",
 ];
 
+let TitlesImgs = [
+    "Mount Everest",
+    "Lhoste",
+    "Markalu",
+    "Cho Oyu",
+    "Mansalu",
+    "Broad Peak",
+    "Nanda Devi",
+    "Tirich Mir",
+    "Trivor",
+    "Gangkhar",
+    "Pasu Sar",
+    "Kabru",
+];
+
 let currentIndex= 0;
 
 function render(){
-    let ImgsRef = document.getElementById('mountain_imgs');
-    ImgsRef.innerHTML = "";
+    let fotogram = document.getElementById('mountain_imgs');
+    fotogram.innerHTML = "";
     for (let i = 0; i < myImgs.length; i++) {
-        ImgsRef.innerHTML += getImages(i);
+        fotogram.innerHTML += getImages(i);
     }   
 }
 
 function getImages(i){
     return `<div onclick="openOverlay(${i})" class="single_img"> 
                <img src="${myImgs[i]}" alt="Bild ${i + 1}"/>
-            </div>`
+               <p>${TitlesImgs[i]}</p>
+            </div>`;
 }
 
  function openOverlay(index){
@@ -49,8 +65,6 @@ function getImages(i){
     }
     return document.getElementById('overlay-img').src = myImgs[currentIndex]
 }
-
- 
 
  function openPreviousImage(){
     currentIndex = currentIndex - 1;
